@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <title>JavaScript - Nome e Sobrenome</title>
+    </head>
+    <body onload="ajustarFoco()">
+        <h1>Entrada, Processamento e Saída</h1>        
+        <div id="quadro" class="mostrar">       
+            <form id="nomes" action="" method="get">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Entre com o seu nome." tabindex="1" />
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" placeholder="Entre com o seu sobrenome." tabindex="2" />
+            </form>
+        
+            <!-- #region Botão Juntar -->
+            <button id="juntar" onclick="juntarNome()" tabindex="3">
+                <i class="fa-solid fa-plus"></i> Juntar
+            </button>
+            <!-- #endregion -->
+
+            <!-- #region Botão Prompt -->
+            <button id="janela" onclick="janelaNome()" tabindex="4">
+                <i class="fa-solid fa-window-maximize"></i> Prompt
+            </button>
+            <!-- #endregion -->
+
+            <!-- #region Botão Escrever -->        
+            <button id="escrever" onclick="escreverNome()" tabindex="5">
+                <i class="fa-solid fa-pencil"></i> Escrever
+            </button>
+            <!-- #endregion -->
+
+            <!-- #region Botão Limpar -->
+            <button id="limpar" onclick="limparDados()" tabindex="6">
+                <i class="fa-solid fa-trash"></i> Limpar
+            </button>
+            <!-- #endregion -->
+            
+            <!-- #region Botão Imprimir -->
+            <!-- <button id="imprimir" onclick="window.print()" tabindex="7"> -->
+            <button id="imprimir" onclick="imprimirPagina()" tabindex="7">
+                <i class="fa-solid fa-print"></i> Imprimir
+            </button>
+            <!-- #endregion -->
+        </div>        
+        <hr />
+        <br />
+        <p>Nome Completo: (innerText)</p>
+        <p id="nomecompleto">Vai aparecer o nome completo aqui.</p>
+        <p>Nome Completo: (innerHTML)</p>
+        <p id="nomecompleto1">Vai aparecer o nome completo aqui.</p>
+        <p>Nome Completo: (textContent)</p>
+        <p id="nomecompleto2">Vai aparecer o nome completo aqui.</p>
+
+        <script type="text/JavaScript" src="js/utilidades.js"></script>
+    </body>
+</html>

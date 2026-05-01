@@ -1,0 +1,38 @@
+@charset "UTF-8"; /* sempre que tiver um @, temos uma diretiva. */
+
+/* @import url(" ") importa qualquer tipo de recurso (outro CSS, fonts, etc). */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); */
+
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+
+
+body {
+    font-family: Lato, Arial, "Times New Romamn";
+    font-size: 14px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+label,
+input[text],
+button {
+    margin-top: 5px;
+    ;
+
+}
+
+#nomecompleto,
+#nomecompleto1, 
+#nomecompleto2 {
+    font-weight: bold;
+}

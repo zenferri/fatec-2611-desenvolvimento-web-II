@@ -1,0 +1,46 @@
+<!-- Leia 2 números. Exiba a soma, subtração, multiplicação e divisão. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex02 - JavaScript</title>
+    <!-- Arquivo de estilos da página -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <h1>Ex02 - JavaScript</h1>
+    <h2>Leia 2 números. Exiba a soma, subtração, multiplicação e divisão.</h2>
+    <!-- Formulário: recebe os 2 números que serão usados nos cálculos -->
+    <form id="ex02" name="ex02" action="" method="post">
+
+        <label for="numero1">Número 1:</label>
+        <input type="number" id="numero1" name="numero1">
+
+        <label for="numero2">Número 2:</label>
+        <input type="number" id="numero2" name="numero2">
+
+        <!-- Grupo de botões: calcular resultados ou limpar os campos -->
+        <div class="botoes">
+            <button type="button" id="gerar" name="gerar" onclick="gerarResultado()">Calcular</button>
+            <button type="button" id="limpar" name="limpar" onclick="limparDados()">Limpar</button>
+        </div>
+
+    </form>
+    <!-- Áreas de saída: cada parágrafo recebe a resposta via propriedade diferente -->
+    <p><strong>1. Resultado innerText:</strong></p>
+    <p id="resultado"></p>
+    <p><strong>2. Resultado innerHTML:</strong></p>
+    <p id="resultado1"></p>
+    <p><strong>3. Resultado textContent:</strong></p>
+    <p id="resultado2"></p>
+    <br>
+    <!-- Script com a lógica de cálculo e limpeza -->
+    <script src="js/ex02_resultado.js"></script>
+    <!-- Link de retorno ao menu principal -->
+    <p><a href="../index.php"><i class="fa-solid fa-arrow-left"></i> Voltar Menu</a></p>
+</body>
+</html>

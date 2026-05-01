@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/* Importação Google Fonts - Lato. */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Importação Google Fonts - Roboto. */
+/*
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*/
+
+/* Importação Ícones - Font Awesome 7. */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css");
+
+/* Importação Ícones - Font Awesome 4. */
+/*
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+*/
+
+body {
+    font-family: Lato, Arial, "Times New Roman";
+    font-size: 14px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;    
+}
+
+label, input[type="text"], button {
+    margin-top: 5px;
+}
+
+input[type="submit"], input[type="reset"] {
+    margin-top: 5px;
+    width: 122px;
+}
+
+#nomecompleto, #nomecompleto1, #nomecompleto2 {
+    font-weight: bold;
+}
+
+.ocultar {
+    display: none;
+}
+
+.mostrar {
+    display: block;
+}

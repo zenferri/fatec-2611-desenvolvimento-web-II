@@ -1,0 +1,43 @@
+<!-- Faça uma contagem progressiva de “menor” até “maior” utilizando o laço “for”. Em
+seguida, faça a contagem regressiva do “maior” para o “menor”. Imprima todos os
+valores da contagem progressiva e regressiva na saída. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex05 - JavaScript</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Ex05 - JavaScript</h1>
+    <h2>Faça uma contagem progressiva de “menor” até “maior” utilizando o laço “for”. Em
+    seguida, faça a contagem regressiva do “maior” para o “menor”. Imprima todos os
+    valores da contagem progressiva e regressiva na saída.</h2> 
+    <!-- Formulário: recebe o menor e o maior número que serão usados nos cálculos -->
+    <form id="ex05" name="ex05" action="" method="post">
+        <label for="menor">Menor:</label>
+        <input type="number" id="menor" name="menor">
+        <label for="maior">Maior:</label>
+        <input type="number" id="maior" name="maior">
+        <!-- Grupo de botões: calcular resultados ou limpar os campos -->
+        <div class="botoes">
+            <button type="button" id="calcular" name="calcular" onclick="calcularContagem()">Mostrar</button>
+            <button type="button" id="limpar" name="limpar" onclick="limparCampos()">Limpar</button>
+        </div>
+    </form>
+    <!-- Áreas de saída: cada parágrafo recebe a resposta via propriedade diferente --> 
+    <p><strong>1. Resultado innerText:</strong></p>
+    <p id="resultado"></p>
+    <p><strong>2. Resultado innerHTML:</strong></p>
+    <p id="resultado1"></p>
+    <p><strong>3. Resultado textContent:</strong></p>
+    <p id="resultado2"></p>
+    <br>
+    <!-- Script com a lógica de cálculo da contagem progressiva e regressiva -->    
+    <script src="./js/ex05_resultado.js"></script>
+    <!-- Link de retorno ao menu principal -->
+    <p><a href="../../index.php"><i class="fa-solid fa-arrow-left"></i> Voltar Menu</a></p>
+</body>
+</html>

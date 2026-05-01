@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Documento HTML5 -->
+<html lang="pt-br">
+<head>
+    <!-- Codificação e responsividade -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos da página -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <title>Exercício 1 - JavaScript</title>
+</head>
+<body>
+    <h1>Exercício 1</h1>
+
+    <!-- Formulário: dados coletados pelo script (innerText / innerHTML / textContent) -->
+    <form id="ex01" name="ex01" action="" method="post">
+        <label for="nomecompleto">Nome Completo: </label>
+        <input type="text" id="nomecompleto" name="nomecompleto" />
+        <label for="email">E-mail: </label>
+        <input type="text" id="email" name="email" />
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" />
+        <label for="idade">Idade: </label>
+        <input type="text" id="idade" name="idade" />
+    </form>
+
+    <!-- Botões fora do form: chamam funções definidas em resultado01.js -->
+    <button id="gerar" name="gerar" onclick="gerarResultado()">Gerar</button>
+    <button id="limpar" name="limpar" onclick="limparDados()">Limpar</button>
+    <br>
+
+    <!-- Áreas de saída: cada parágrafo recebe o mesmo texto via propriedade diferente (comparação didática) -->
+    <p><strong>1. Resultado innerText:</strong></p>
+    <p id="resultado"></p>
+    <p><strong>2. Resultado innerHTML:</strong></p>
+    <p id="resultado1"></p>
+    <p><strong>3. Resultado textContent:</strong></p>
+    <p id="resultado2"></p>
+    <br>
+
+    <!-- Link de retorno ao menu principal -->
+    <p><a href="../index.php">
+        <i class="fa-solid fa-arrow-left"></i> Voltar Menu</a>
+    </p>
+
+    <!-- Lógica: leitura dos campos e preenchimento dos #resultado, #resultado1, #resultado2 -->
+    <script src="js/resultado01.js"></script>
+</body>
+</html>

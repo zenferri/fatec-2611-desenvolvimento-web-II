@@ -1,0 +1,48 @@
+<!-- Faça o cálculo da média de 5 notas de um aluno. Mostre na saída o lançamento das 5
+notas e o resultado final da média final desse aluno. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex01 - JavaScript</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Ex01 - JavaScript</h1>
+    <h2>Faça o cálculo da média de 5 notas de um aluno. Mostre na saída o lançamento das 5
+    notas e o resultado final da média final desse aluno.</h2>
+    <!-- Formulário: recebe as 5 notas do aluno -->
+    <form id="ex01" name="ex01" action="" method="post">
+        <label for="nota1">Nota 1:</label>
+        <input type="number" id="nota1" name="nota1">
+        <label for="nota2">Nota 2:</label>
+        <input type="number" id="nota2" name="nota2">
+        <label for="nota3">Nota 3:</label>
+        <input type="number" id="nota3" name="nota3">
+        <label for="nota4">Nota 4:</label>
+        <input type="number" id="nota4" name="nota4">
+        <label for="nota5">Nota 5:</label>
+        <input type="number" id="nota5" name="nota5">
+        <!-- Grupo de botões: calcular resultados ou limpar os campos -->
+        <div class="botoes">
+            <button type="button" id="calcular" name="calcular" onclick="calcularMedia()">Calcular</button>
+            <button type="button" id="limpar" name="limpar" onclick="limparCampos()">Limpar</button>
+        </div>
+    </form>
+    <!-- Áreas de saída: cada parágrafo recebe a resposta via propriedade diferente -->
+    <p><strong>1. Resultado innerText:</strong></p>
+    <p id="resultado"></p>
+    <p><strong>2. Resultado innerHTML:</strong></p>
+    <p id="resultado1"></p>
+    <p><strong>3. Resultado textContent:</strong></p>
+    <p id="resultado2"></p>
+    <br>
+    <!-- Script com a lógica de cálculo da média -->
+    <script src="./js/ex01_resultado.js"></script>
+    <!-- Link de retorno ao menu principal -->
+    <p><a href="../../index.php"><i class="fa-solid fa-arrow-left"></i> Voltar Menu</a></p>
+
+</body>
+</html>

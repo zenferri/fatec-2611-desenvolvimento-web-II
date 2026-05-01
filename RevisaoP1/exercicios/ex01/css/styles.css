@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+/* Importação Google Fonts - Lato. */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Importação Google Fonts - Roboto. */
+/*
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*/
+
+/* Importação Ícones - Font Awesome 7. */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css");
+
+/* Importação Ícones - Font Awesome 4. */
+/*
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+*/
+
+:root {
+    color-scheme: light;
+    --bg-start: #f3f7ff;
+    --bg-end: #eef2f8;
+    --surface: #ffffff;
+    --surface-soft: #f8fbff;
+    --border: #d5deec;
+    --text: #1e293b;
+    --muted: #52607a;
+    --primary: #1d4ed8;
+    --primary-dark: #1e40af;
+    --secondary: #64748b;
+    --shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+body {
+    font-family: Lato, Arial, "Times New Roman";
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text);
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 32px 20px 48px;
+    background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 2.2rem;
+    color: #0f172a;
+}
+
+h2 {
+    margin: 0 0 24px;
+    max-width: 640px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--muted);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: min(100%, 360px);
+    padding: 24px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+label {
+    margin-top: 6px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: var(--surface-soft);
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #7aa2ff;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.14);
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    margin-top: 10px;
+    min-width: 122px;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 12px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    transform: translateY(-1px);
+}
+
+button,
+input[type="submit"],
+#gerar {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    box-shadow: 0 10px 22px rgba(29, 78, 216, 0.28);
+}
+
+input[type="reset"],
+#limpar {
+    color: #ffffff;
+    background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+    box-shadow: 0 10px 22px rgba(71, 85, 105, 0.22);
+}
+
+form div,
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#resultado,
+#resultado1,
+#resultado2,
+#resultado3,
+form p {
+    max-width: 700px;
+    padding: 12px 14px;
+    border-left: 4px solid var(--primary);
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+p strong {
+    color: #0f172a;
+}
+
+a {
+    color: var(--primary-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#nomecompleto,
+#nomecompleto1,
+#nomecompleto2 {
+    font-weight: bold;
+}
+
+.ocultar {
+    display: none;
+}
+
+.mostrar {
+    display: block;
+}

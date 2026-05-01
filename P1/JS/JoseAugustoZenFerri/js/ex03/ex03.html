@@ -1,0 +1,39 @@
+<!-- Informado um número determine se ele é par ou ímpar? Mostre na saída: o número
+digitado e se é par ou ímpar. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex03 - JavaScript</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Ex03 - JavaScript</h1>
+    <h2>Informado um número determine se ele é par ou ímpar? Mostre na saída: o número
+    digitado e se é par ou ímpar.</h2> 
+    <!-- Formulário: recebe o número que será usado nos cálculos -->
+    <form id="ex03" name="ex03" action="" method="post">
+        <label for="numero">Número:</label>
+        <input type="number" id="numero" name="numero">
+        <!-- Grupo de botões: calcular resultados ou limpar os campos -->
+        <div class="botoes">
+            <button type="button" id="calcular" name="calcular" onclick="calcularParImpar()">Mostrar</button>
+            <button type="button" id="limpar" name="limpar" onclick="limparCampos()">Limpar</button>
+        </div>
+    </form>
+    <!-- Áreas de saída: cada parágrafo recebe a resposta via propriedade diferente --> 
+    <p><strong>1. Resultado innerText:</strong></p>
+    <p id="resultado"></p>
+    <p><strong>2. Resultado innerHTML:</strong></p>
+    <p id="resultado1"></p>
+    <p><strong>3. Resultado textContent:</strong></p>
+    <p id="resultado2"></p>
+    <br>
+    <!-- Script com a lógica de cálculo do par ou ímpar -->
+    <script src="./js/ex03_resultado.js"></script>
+    <!-- Link de retorno ao menu principal -->
+    <p><a href="../../index.php"><i class="fa-solid fa-arrow-left"></i> Voltar Menu</a></p>
+</body>
+</html>
