@@ -1,0 +1,87 @@
+/**
+ * Estilos globais e complementares ao Bootstrap.
+ * Cores de classificação dinâmicas vêm inline na faixa do IMC (valores do domínio).
+ */
+
+.imc-body {
+    background-color: #f8f9fa;
+}
+
+.imc-title {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #0d274d;
+}
+
+.imc-sub {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.imc-form-wrap {
+    max-width: 560px;
+}
+
+.imc-form {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+}
+
+.resultado-wrap {
+    max-width: 720px;
+}
+
+.resultado-table {
+    --bs-table-bg: transparent;
+}
+
+.imc-table-img {
+    max-height: 420px;
+    object-fit: contain;
+}
+
+.resultado-faixa {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.recomendacao {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.regime-precisa {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.regime-ok {
+    background-color: #198754;
+    color: #fff;
+}
+
+/* Splash (preserva ideia do splashscreen.php original) */
+.splash-body {
+    background-color: #fff;
+}
+
+.splash-header {
+    height: 80px;
+    padding: 10px 30px;
+}
+
+.splash-footer {
+    height: 60px;
+    padding: 10px 30px;
+}
+
+.splash-spinner {
+    font-size: 3rem;
+    color: #0d6efd;
+    margin-top: 20px;
+}
+
+.splash-main {
+    text-align: center;
+}
