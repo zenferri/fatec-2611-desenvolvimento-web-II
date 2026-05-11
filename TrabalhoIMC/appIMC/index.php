@@ -7,15 +7,15 @@
 session_start();
 
 if ($_GET) {
-    $controle = $_GET["controle"] ?? "IMCController";
-    $metodo = $_GET["metodo"] ?? "splashscreen";
+    $controle = $_GET["controle"] ?? "IMCController"; // pega o controle da url
+    $metodo = $_GET["metodo"] ?? "splashscreen"; // pega o metodo da url
 
-    require_once "Controllers/{$controle}.class.php";
-    $obj = new $controle();
-    $obj->$metodo();
+    require_once "Controllers/{$controle}.class.php"; // carrega o controle
+    $obj = new $controle(); // cria uma instância do controle
+    $obj->$metodo(); // chama o metodo do controle
 } else {
-    require_once "Controllers/IMCController.class.php";
+    require_once "Controllers/IMCController.class.php"; // carrega o controle
 
-    $obj = new IMCController();
-    $obj->splashscreen();
+    $obj = new IMCController(); // cria uma instância do controle
+    $obj->splashscreen(); // chama o metodo splashscreen do controle
 }

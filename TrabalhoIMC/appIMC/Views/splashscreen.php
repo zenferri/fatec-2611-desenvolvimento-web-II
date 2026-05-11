@@ -39,7 +39,7 @@
             font-size: 3rem;
             color: #007bff;
             margin-top: 20px;
-            animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite; 
         }
 
         @keyframes spin {

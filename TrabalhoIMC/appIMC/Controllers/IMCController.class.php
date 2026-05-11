@@ -3,10 +3,10 @@
 /**
  * Controlador: orquestra telas (splash, formulário, resultado) e o fluxo POST do cálculo.
  */
-class IMCController
+class IMCController // classe IMCController
 {
     /** Exibe a tela inicial (splash) com redirecionamento automático no HTML. */
-    public function splashscreen(): void
+    public function splashscreen(): void // void é um tipo de retorno que não retorna nada
     {
         require_once "Views/splashscreen.php";
     }
@@ -24,27 +24,27 @@ class IMCController
      */
     public function calcular(): void
     {
-        if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+        if ($_SERVER["REQUEST_METHOD"] !== "POST") { // se o metodo da requisição não for POST
             header("Location: imc.php");
-            exit;
+            exit; // sai da pagina
         }
 
-        $peso = $this->converterNumero($_POST["peso"] ?? "");
-        $altura = $this->converterNumero($_POST["altura"] ?? "");
+        $peso = $this->converterNumero($_POST["peso"] ?? ""); // converte o peso para float
+        $altura = $this->converterNumero($_POST["altura"] ?? ""); // converte a altura para float
 
-        if ($peso <= 0 || $altura <= 0) {
+        if ($peso <= 0 || $altura <= 0) { // se o peso ou a altura for menor ou igual a 0
             header("Location: imc.php?erro=1");
-            exit;
+            exit; // sai da pagina
         }
 
-        require_once "Models/IMC.class.php";
+        require_once "Models/IMC.class.php"; // carrega o modelo IMC
 
-        $imcModel = new IMC();
+        $imcModel = new IMC(); // cria uma instância do modelo IMC
         $imc = $imcModel->CalcularIMC($altura, $peso);
-        $classificacao = $imcModel->ClassificacaoIMC($imc);
-        $recomendacao = $imcModel->Recomendacao($imc);
+        $classificacao = $imcModel->ClassificacaoIMC($imc); // classifica o IMC
+        $recomendacao = $imcModel->Recomendacao($imc); // recomenda o IMC
 
-        $_SESSION["resultado_imc"] = array(
+        $_SESSION["resultado_imc"] = array( // salva o resultado do IMC na sessão   
             "peso" => $peso,
             "altura" => $altura,
             "imc" => $imc,
@@ -52,25 +52,25 @@ class IMCController
             "recomendacao" => $recomendacao
         );
 
-        header("Location: resultado.php");
+        header("Location: resultado.php"); // redireciona para a pagina resultado.php
         exit;
     }
 
     /** Lê resultado da sessão e renderiza a view; sem sessão, volta ao formulário. */
     public function resultado(): void
     {
-        if (!isset($_SESSION["resultado_imc"])) {
-            header("Location: imc.php");
+        if (!isset($_SESSION["resultado_imc"])) { // se o resultado do IMC não estiver na sessão
+            header("Location: imc.php"); // redireciona para a pagina imc.php
             exit;
         }
 
         $resultado = $_SESSION["resultado_imc"];
-        require_once "Views/resultado.php";
+        require_once "Views/resultado.php"; // carrega a view resultado.php
     }
 
     /** Normaliza entrada brasileira (vírgula decimal) para float. */
-    private function converterNumero(string $valor): float
+    private function converterNumero(string $valor): float // converte o valor para float
     {
-        return (float) str_replace(",", ".", trim($valor));
+        return (float) str_replace(",", ".", trim($valor)); // converte a vírgula para ponto e remove os espaços
     }
 }

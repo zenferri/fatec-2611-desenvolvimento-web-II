@@ -3,7 +3,7 @@
  * View de resultado do IMC: recebe $resultado (array) do controlador.
  * Formata números no padrão BR e define cores por classificação.
  */
-$peso = number_format($resultado["peso"], 2, ",", ".");
+$peso = number_format($resultado["peso"], 2, ",", "."); 
 $altura = number_format($resultado["altura"], 2, ",", ".");
 $imc = number_format($resultado["imc"], 2, ",", ".");
 $classificacao = $resultado["classificacao"];
