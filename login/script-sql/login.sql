@@ -1,7 +1,6 @@
-/*CREATE DATABASE login;
+CREATE DATABASE login;
 
 USE login;
-*/
 
 CREATE TABLE tipo_usuario (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
