@@ -42,6 +42,13 @@
             animation: spin 1s linear infinite; 
         }
 
+        .countdown {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #007bff;
+            margin-top: 12px;
+        }
+
         @keyframes spin {
             100% {
                 transform: rotate(360deg);
@@ -67,6 +74,7 @@
     <main class="d-flex flex-column justify-content-center align-items-center flex-grow-1 px-3">
         <h1 class="fw-bold mb-4 text-center">Aplicativo IMC</h1>
         <i class="fas fa-spinner fa-spin spinner"></i>
+        <p class="countdown text-center mb-0">Redirecionando em <span id="contador">5</span>s...</p>
         <h3 class="fw-bold my-4 text-center">Curso Superior de Tecnologia em<br>Desenvolvimento de Software Multiplataforma</h3>
         <p class="text-center"><strong>José Augusto Zen Ferri</strong></p>
         <p class="text-center">Professor: Alex Paulo Lopes Batista<br>Disciplina: Desenvolvimento Web II (DW2).</p>
@@ -75,6 +83,24 @@
     <footer class="footer text-center">
         <p>&copy; Todos os direitos reservados. Faculdade de Tecnologia de Jahu, 2025.</p>
     </footer>
+
+    <script>
+        // Contagem regressiva sincronizada com o meta refresh (5s)
+        (function () {
+            var segundos = 5; 
+            var elemento = document.getElementById('contador'); // pega o elemento contador
+            var intervalo = setInterval(function () { // seta o intervalo de 1 segundo
+                segundos--; // decrementa o contador
+                if (segundos <= 0) { // se o contador for menor ou igual a 0
+                    elemento.textContent = 0; // seta o texto do elemento contador para 0
+                    clearInterval(intervalo); // limpa o intervalo
+                    return; // retorna
+                }
+                elemento.textContent = segundos; // seta o texto do elemento contador para o contador
+            }, 1000); // seta o intervalo de 1 segundo
+        })(); // chama a função
+    </script>
 </body>
 
 </html>
+
